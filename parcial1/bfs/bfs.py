@@ -8,11 +8,12 @@ def busqueda_amplitud(value:str,root:Node) -> Node:
     evaluated = []
     i = 0
     while len(toEvaluate) > 0:
-        i += 1
-        print(f"Iteracion {i}")
         current = toEvaluate.pop(0)
         if(current in evaluated):
             continue
+
+        i += 1
+        print(f"Iteracion {i}")
         if current.data == value:
             return current
         evaluated.append(current)
